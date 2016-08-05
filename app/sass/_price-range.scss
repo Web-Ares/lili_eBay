@@ -1,0 +1,66 @@
+/* --------------- price-range --------------- */
+.price-range {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px 5px 5px 10px;
+
+  fieldset {
+    display: block;
+    margin-left: 10px;
+
+    &:first-child { margin-left: 0; }
+  }
+
+  label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .price-range__field {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 50px;
+    height: 30px;
+
+    &:before {
+      @include absoluteCenterY();
+      left: 3px;
+      z-index: 1;
+      color: #a5a3a3;
+      font-family: $fontNoto;
+      content: '$';
+    }
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0 3px 0 13px;
+      font-family: $font;
+      border: 1px solid #9b8570;
+      background: #fff;
+    }
+  }
+}
+
+@media (min-width: $small) {
+  .price-range {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .price-range {
+
+  }
+}
+
+@media (min-width: $large) {
+  .price-range {
+
+  }
+}
+/* --------------- /price-range --------------- */

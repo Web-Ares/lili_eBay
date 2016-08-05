@@ -1,0 +1,111 @@
+/* --------------- search --------------- */
+.search {
+  @include absoluteCenterY();
+  left: 55px;
+  overflow: hidden;
+  height: 30px;
+  width: 30px;
+  max-width: calc(100% - 95px);
+  transition: width .3s ease-in-out;
+  background: #fff;
+
+  .search__btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    z-index: 2;
+    border: 1px solid #fff;
+    background: #fff;
+
+    &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: url("../img/search-icon.png") no-repeat center;
+      transition: opacity .3s ease-in-out;
+      content: '';
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background: url("../img/close-icon.png") no-repeat center;
+      transition: opacity .3s ease-in-out;
+      content: '';
+    }
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 35px;
+    background: none;
+    border: none;
+  }
+
+  button[type=submit] {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+    opacity: 0;
+    border: none;
+    background: #fff url("../img/search-icon.png") no-repeat center;
+    transition: opacity .3s ease-in-out;
+  }
+
+  &.open {
+    width: 250px;
+
+    .search__btn {
+
+      &:before { opacity: 0; }
+
+      &:after { opacity: 1; }
+    }
+
+    button[type=submit] { opacity: 1; }
+  }
+}
+
+@media (min-width: $small) {
+  .search {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .search {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: translate(0,0);
+    width: 200px;
+    height: 40px;
+    background: #fff;
+  }
+}
+
+@media (min-width: $large) {
+  .search {
+
+  }
+}
+/* --------------- /search --------------- */

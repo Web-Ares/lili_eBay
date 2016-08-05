@@ -1,0 +1,62 @@
+/* --------------- btn --------------- */
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  padding: 10px;
+  border: 1px solid #8a8b8c;
+  font-family: $font;
+  font-size: 12px;
+  text-transform: uppercase;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 0;
+    height: 1px;
+    background: #8a8b8c;
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+  }
+
+  &:hover:before {
+    height: 100%;
+    opacity: 1;
+  }
+
+  span {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    transition: color .3s ease-in-out;
+  }
+}
+
+@media (min-width: $small) {
+  .btn {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .btn {
+    padding: 15px;
+    font-size: 14px;
+
+  }
+}
+
+@media (min-width: $large) {
+  .btn {
+
+  }
+}
+/* --------------- /btn --------------- */

@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+/*
+    ares-select styles
+    version: 18.11.2015
+
+    ares-select
+
+*/
+
+/* ---------------- ares-select ------------------ */
+.ares-select{
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding: 8px 10px 8px 20px;
+  cursor: pointer;
+  min-width: 70px;
+  font-size: 13px;
+  font-family: $font;
+  border: 1px solid #e4e4e4;
+  border-radius: 2px;
+}
+.ares-select:before{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  width: 4px;
+  height: 4px;
+  margin-top: -3px;
+  border: 2px solid #000;
+  border-width: 0 0 2px 2px;
+  transform: rotate(-45deg);
+  transition: right .3s ease;
+  content: '';
+}
+.ares-select__item {
+  position: relative;
+  padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+.ares-select_mobile select {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 100%;
+  bottom: -1px;
+}
+.ares-select_custom select{
+  display: none;
+}
+.ares-select__popup {
+  position: absolute;
+  z-index: 10;
+  overflow: hidden;
+  color: #000;
+  font-size: 13px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.5);
+  background: #fff;
+  margin-left: -1px;
+  min-width: 100px;
+}
+.ares-select__popup ul {
+  z-index: 1;
+}
+.ares-select__popup li {
+  padding: 5px 15px 5px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: transparent;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+
+  &:first-child { border-top: none; }
+}
+.ares-select__popup li:hover,
+.ares-select__popup li.active {
+  background: #333333;
+  color: #fff;
+}
+.ares-select__popup a,
+.ares-select__popup a:visited {
+  color: #000;
+}
+.ares-select__popup .iScrollVerticalScrollbar {
+  position: absolute;
+  width: 15px;
+  top: 0;
+  bottom: 0;
+  background: #ccc;
+  right: 0;
+  z-index: 3;
+  -webkit-transform: translateZ(0);
+}
+.ares-select__popup .iScrollIndicator {
+  background: #aaa;
+}
+/* ---------------- /ares-select ------------------ */

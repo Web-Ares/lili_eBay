@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/* ------------ find-star ------------ */
+.find-star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../img/find-star-bg.jpg") no-repeat center;
+  background-size: cover;
+  color: #fff;
+  font-family: $fontNoto;
+  height: 170px;
+  padding: 30px 20px;
+
+  & header {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      margin-left: -48px;
+      width: 21px;
+      height: 1px;
+      border-left: 39px solid rgba( 255, 255, 255, 0.5 );
+      border-right: 39px solid rgba( 255, 255, 255, 0.5 );
+    }
+    &:after {
+      content: '';
+      width: 11px;
+      height: 11px;
+      background: url("../img/find-star.png") no-repeat;
+      background-size: contain;
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      margin-left: -4px;
+      -webkit-transition: transform 0.3s ease;
+      transition: transform 0.3s ease;
+    }
+    + div {
+      font-size: 26px;
+    }
+  }
+
+  &:hover {
+    & header {
+      &:after {
+        -ms-transform: rotate(360deg) scale(1.5);
+        -webkit-transform: rotate(360deg) scale(1.5);
+        transform: rotate(360deg) scale(1.5);
+      }
+    }
+  }
+}
+
+@media (min-width: $small) {
+  .find-star {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .find-star {
+
+    & header {
+      + div {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+@media (min-width: $large) {
+  .find-star {
+
+  }
+}
+/* ------------ /find-star ------------ */

@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+/* ------------ about-us ------------ */
+.about-us {
+
+  h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 27px;
+    color: #000;
+    font-weight: 400;
+  }
+
+  p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+  &__place {
+    position: relative;
+    padding: 10px 0;
+  }
+
+  &__address {
+    font-style: normal;
+    display: block;
+    margin-bottom: 30px;
+
+    &-title {
+      font-family: $fontNoto;
+      font-size: 20px;
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+    div {
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: rgb( 68, 68, 68 );
+      line-height: 1;
+    }
+
+    a[href^="tel:"] {
+      cursor: default;
+      color: inherit;
+    }
+  }
+
+  &__map {
+    position: relative;
+    max-width: 438px;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    a,
+    a:visited {
+      background: #fff;
+      border: 1px solid #999;
+      position: absolute;
+      padding: 5px 13px 5px;
+      font-family: "Arial", sans-serif;
+      font-weight: 700;
+      color: #666;
+      font-size: 10px;
+      box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+
+      &:after {
+        content: '';
+        position: absolute;
+        background: #fff;
+        width: 4px;
+        height: 4px;
+        left: 50%;
+        margin-left: -2px;
+        bottom: -3px;
+        border: 1px solid #999;
+        border-width: 0 1px 1px 0;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .about-us__map-tooltip {
+        background: #747474;
+        font-weight: 400;
+        color: #fff;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        white-space: nowrap;
+        padding: 5px 10px;
+        margin-bottom: 9px;
+        -webkit-transition: opacity .3s ease;
+        transition: opacity .3s ease;
+        visibility: hidden;
+        opacity: 0;
+        display: block;
+        box-shadow: 0 3px 1px rgba(0,0,0,.1);
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 3px 3.5px 0 3.5px;
+          border-color: #747474 transparent transparent transparent;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+        }
+      }
+      &:hover .about-us__map-tooltip {
+        opacity: 1;
+        visibility: visible;
+      }
+      &.about-us__map-ny {
+        bottom: 76.8%;
+        left: 12%;
+      }
+      &.about-us__map-ta {
+        bottom: 67.3%;
+        left: 44.4%;
+      }
+      &.about-us__map-hk {
+        bottom: 59.7%;
+        right: 3%;
+      }
+    }
+  }
+}
+
+@media (min-width: $small) {
+  .about-us {
+
+    &__place {
+      text-align: center;
+      padding: 20px 0;
+
+      &:before {
+        width: 200px;
+        height: 2px;
+        margin-left: -100px;
+      }
+    }
+
+    &__address {
+      display: inline-block;
+      vertical-align: top;
+      width: 27%;
+      margin: 0 20px 30px;
+      text-align: left;
+    }
+
+    &__map {
+
+      a {
+        font-size: 12px;
+
+        &.about-us__map-ny {
+          left: 17%;
+        }
+        &.about-us__map-ta {
+          left: 48.4%;
+        }
+        &.about-us__map-hk {
+          right: 8%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $medium) {
+  .about-us {
+
+  }
+}
+@media (min-width: $large) {
+  .about-us {
+
+  }
+}
+/* ------------ /about-us ------------ */

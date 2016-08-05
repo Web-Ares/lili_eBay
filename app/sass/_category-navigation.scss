@@ -1,0 +1,38 @@
+/* --------------- category-navigation --------------- */
+.category-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+
+  .category-navigation__item {
+    display: block;
+    margin: 5px 10px;
+    color: #000;
+
+    &:visited { color: #000; }
+
+    &:hover { text-decoration: underline; }
+
+    &.active { font-family: $font-bold; }
+  }
+}
+
+@media (min-width: $small) {
+  .category-navigation {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .category-navigation {
+
+  }
+}
+
+@media (min-width: $large) {
+  .category-navigation {
+
+  }
+}
+/* --------------- /category-navigation --------------- */

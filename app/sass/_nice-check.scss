@@ -1,0 +1,74 @@
+/* ------------ nice-check ------------ */
+.nice-check {
+  font-size: 10px;
+
+  input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+
+    &:checked + label:after { opacity: 1; }
+  }
+
+  label {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin-right: 23px;
+    border-bottom: 1px solid transparent;
+    user-select: none;
+    transition: border .3s ease;
+
+    &:hover { border-bottom: 1px solid #cfcfcf; }
+
+    &:before {
+      @include absoluteCenterY();
+      right: -20px;
+      width: 13px;
+      height: 13px;
+      border: 1px solid #cfcfcf;
+      border-radius: 3px;
+      content: '';
+    }
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: -17px;
+      width: 6px;
+      height: 6px;
+      margin-top: -8px;
+      border: 2px solid #333333;
+      opacity: 0;
+      transition: opacity .3s ease;
+      clip: rect(3px, 10px, 10px, 6px);
+      transform: rotate(45deg);
+      content: '';
+    }
+  }
+}
+
+@media (min-width: $medium) {
+  .nice-check {
+    font-size: 13px;
+
+    label {
+      margin-right: 30px;
+
+      &:before {
+        width: 21px;
+        height: 21px;
+        right: -30px;
+      }
+
+      &:after {
+        width: 10px;
+        height: 10px;
+        right: -24px;
+        margin-top: -12px;
+        clip: rect(3px, 20px, 20px, 9px);
+      }
+    }
+  }
+}
+
+/* ------------ /nice-check ------------ */
