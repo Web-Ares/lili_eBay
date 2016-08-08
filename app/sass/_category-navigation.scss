@@ -3,11 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 15px;
+  padding: 7px 0 30px;
 
   .category-navigation__item {
     display: block;
-    margin: 5px 10px;
+    margin: 5px 10px 6px;
     color: #000;
 
     &:visited { color: #000; }

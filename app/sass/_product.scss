@@ -70,10 +70,12 @@
     border-width: 2px 0 2px 0;
 
     h3 {
-      margin-bottom: 10px;
+      margin-bottom: 11px;
       font-family: $font-bold;
       color: #000;
     }
+
+    p { line-height: 1.5em }
   }
 
   &__buy-info + &__buy-info {
@@ -82,7 +84,6 @@
 
   &__info {
     padding: 15px 0 0;
-    line-height: 1.4em;
 
     h2 {
       font-size: 40px;
@@ -93,11 +94,12 @@
 
     p {
       color: #000;
-      margin-bottom: 15px;
+      margin-bottom: 2px;
+      line-height: 1.6em;
     }
 
     h3 {
-      padding: 15px 0 15px 20px;
+      padding: 31px 0 12px 20px;
       font-size: 18px;
       color: #000;
     }
@@ -105,6 +107,7 @@
     dl {
       padding: 0 0 5px 20px;
       color: #444444;
+      line-height: 1.6em;
 
       dt {
         display: inline-block;
@@ -139,19 +142,19 @@
 
       .gallery-thumbs {
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 38px;
 
-        .swiper-slide { padding-bottom: 15%; }
+        .swiper-slide { padding-bottom: 12%; }
       }
     }
 
     &__buy-info {
-      padding: 15px 0;
+      padding: 17px 0;
     }
 
     &__info {
       width: calc(100% - 595px);
-      padding: 15px 0 0;
+      padding: 0;
     }
   }
 }

@@ -100,6 +100,16 @@
     width: 200px;
     height: 40px;
     background: #fff;
+
+    .search__btn { display: none; }
+
+    button[type=submit] {
+      opacity: 1;
+      width: 40px;
+      background-color: transparent;
+    }
+
+    input { padding: 0 40px 0 10px }
   }
 }
 

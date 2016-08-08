@@ -119,12 +119,12 @@ body {
 	}
 
 	.site__aside {
-		padding: 15px 10px 15px 20px;
+		padding: 18px 10px 18px 18px;
 		margin-bottom: 20px;
 		border: 1px solid #f0f0f0;
 
 		h2 {
-			margin-bottom: 15px;
+			margin-bottom: 7px;
 			font-size: 18px;
 			font-family: $font;
 		}
@@ -173,14 +173,14 @@ body {
 	.site__header {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-end;
 		height: 230px;
 
 		.site__header-row {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			padding: 20px 0;
+			padding: 18px 0;
 		}
 
 		.site__header-phone {
@@ -239,7 +239,7 @@ body {
   .site {
 
 	.site__header {
-		padding: 0 calc(50% - 600px);
+		padding: 16px calc(50% - 560px);
 	}
 
 	.site__content {
