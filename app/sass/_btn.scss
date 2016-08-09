@@ -8,6 +8,7 @@
   font-family: $font;
   font-size: 12px;
   text-transform: uppercase;
+  text-align: center;
 
   &:before {
     content: '';
@@ -31,12 +32,15 @@
   }
 
   span {
-    display: table-cell;
-    vertical-align: middle;
     position: relative;
     z-index: 2;
     color: #fff;
     transition: color .3s ease-in-out;
+  }
+
+  &.btn_2 {
+    border: none;
+    background-color: #000;
   }
 }
 
